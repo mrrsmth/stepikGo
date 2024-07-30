@@ -98,12 +98,41 @@ func main() {
 	// }
 	// fmt.Println(slice)
 
-	var inputNum, lastNumber int
-	// count := 0
-	fmt.Scan(&inputNum)
-	for fmt.Scan(&inputNum); inputNum != 0; fmt.Scan(&inputNum) {
-		lastNumber = inputNum
-		fmt.Println(lastNumber)
+	// var inputNum int
+	// var maxNumber int
+	// var maxCount int
+
+	// for fmt.Scan(&inputNum); inputNum != 0; fmt.Scan(&inputNum) {
+	// 	if inputNum > maxNumber {
+	// 		maxNumber = inputNum
+	// 		maxCount = 1
+	// 	} else if inputNum == maxNumber {
+	// 		maxCount++
+	// 	}
+	// }
+
+	// fmt.Println(maxCount)
+
+	// Найдите первое число от 1 до n включительно, кратное c, но НЕ кратное d.
+	// Входные данные
+	// Вводится 3 натуральных числа n, c, d, каждое из которых не превышает 10000.
+	// Выходные данные
+	// Вывести первое число от 1 до n включительно, кратное c, но НЕ кратное d. Если такого числа нет - выводить ничего не нужно.
+
+	var n, c, d int
+
+	fmt.Scan(&n)
+	fmt.Scan(&c)
+	fmt.Scan(&d)
+	scanThreeNum(n, c, d)
+}
+
+func scanThreeNum(n, c, d int) {
+	for i := 1; i < n; i++ {
+		if i%c == 0 && i%d != 0 {
+			fmt.Println(i)
+			break
+		}
 	}
 }
 
