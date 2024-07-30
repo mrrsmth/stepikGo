@@ -89,6 +89,22 @@ func main() {
 	// Вводится непустая последовательность натуральных чисел, оканчивающаяся числом 0 (само число 0 в последовательность не входит, а служит как признак ее окончания).
 	// Формат выходных данных:
 	// Выведите ответ на задачу.
+
+	// var inputNum int
+	// slice := []int{}
+	// fmt.Scan(&inputNum)
+	// for inputNum != 0 {
+	// 	slice = append(slice, inputNum)
+	// }
+	// fmt.Println(slice)
+
+	var inputNum, lastNumber int
+	// count := 0
+	fmt.Scan(&inputNum)
+	for fmt.Scan(&inputNum); inputNum != 0; fmt.Scan(&inputNum) {
+		lastNumber = inputNum
+		fmt.Println(lastNumber)
+	}
 }
 
 func forSum(num int) int {
